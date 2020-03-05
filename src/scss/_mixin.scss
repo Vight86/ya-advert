@@ -1,0 +1,26 @@
+@mixin gotham($fWeight) {
+  @font-face {
+    font-weight: $fWeight;
+    font-family: 'Gotham';
+    font-style: normal;
+    src:
+      url('/build/fonts/Gotham-Book.eot') format('eot'),
+      url('/build/fonts/Gotham-Book.ttf') format('truetype'),
+      url('/build/fonts/Gotham-Book.woff') format('woff'),
+      url('/build/fonts/Gotham-Book.woff2') format('woff2');
+  }
+}
+
+@mixin font($fSize, $fWeight, $lSpacing) {
+  font-weight: $fWeight;
+  font-size: (($fSize / 16 ) + rem);
+  letter-spacing: $lSpacing;
+}
+
+@mixin absolutePosition($width, $height, $top: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+}
